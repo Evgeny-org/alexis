@@ -14,6 +14,11 @@ font-family: 'Sacramento', cursive;
 	padding: 0;
 }
 
+@font-face{
+	font-family: WSAJ; 
+	src: url(fonts/WisdomScriptAJ.otf); 
+}
+
 .container{
 	max-width: 1200px;
 	margin: 0 auto;
@@ -1215,6 +1220,92 @@ main .getInTouch form button{
 main .getInTouch form button p{
 	color: #fff;
 }
+footer{
+	background-color: rgba(0, 0, 0, .20);
+	padding-bottom: 150px;
+}
+footer .container{
+	background-color: #3f4049;
+	display: flex;
+	padding: 50px 0; 
+	position: relative;
+}
+footer .container .lines{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+footer .container .line{
+	width: 25%;
+	height: 4px;
+	background-color: red;
+}
+footer .container .line:nth-child(1){
+	background-color: #fc5f45;
+}
+footer .container .line:nth-child(2){
+	background-color: #38c695;
+}
+footer .container .line:nth-child(3){
+	background-color: #a374de;
+}
+footer .container .line:nth-child(4){
+	background-color: #cb995a;
+}
+footer .container .left,
+footer .container .right{
+	width: 25%;
+}
+footer .container .middle{
+	width: 50%;
+	display: flex;
+}
+footer .container .middle .block{
+	padding: 0 25px;
+}
+footer .container .left p{
+	font-family: WSAJ;
+	color: #fc5f45;
+	font-size: 50px;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+footer .container .left p span{
+	color: #fff;
+}
+footer .container h5{
+	font-family: Poppins;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+footer .container .middle .block:nth-child(1) h5{
+	color: #38c695;
+}
+footer .container .middle .block:nth-child(2) h5{
+	color: #a374de;
+}
+footer .container .right h5{
+	color: #cb995a;
+}
+footer .container p.text1{
+	font-family: Poppins;
+	font-weight: 400;
+	color: #fff;
+}
+footer .container .right{
+	padding: 0 25px;
+	box-sizing: border-box;
+}
+footer .container .right .icons img{
+	margin-right: 25px;
+}
+
 
 
 
