@@ -52,9 +52,11 @@ p.text1Block{
 }
 p.text2{
 	font-size: 15px;
+	color: grey;
 }
 p.text3{
 	font-size: 13px;
+	color: grey;
 }
 p.text1, p.text2, p.text3{
 	font-family: Poppins;
@@ -706,11 +708,11 @@ main .workSteps .block .blockInBefore .right p{
 	line-height: 1.75;
 }
 main .pricingTable{
-	background-color: rgba(0, 0, 0, .1);
+	background-color: rgba(0, 0, 0, .05);
 }
 main .pricingTable .container{
 	position: relative;
-	padding-top: 150px;
+	padding: 150px 0;
 }
 main .pricingTable .blocks{
 	display: flex;
@@ -722,6 +724,25 @@ main .pricingTable .blocks .block{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 25px 0;
+	position: relative;
+}
+main .pricingTable .blocks .block::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+}
+main .pricingTable .blocks .block:nth-child(1)::before{
+	background-color: #38c695;
+}
+main .pricingTable .blocks .block:nth-child(2)::before{
+	background-color: #fc5f45;
+}
+main .pricingTable .blocks .block:nth-child(3)::before{
+	background-color: #a374de;
 }
 main .pricingTable .block h5{
 	font-family: Poppinsrif;
@@ -805,18 +826,235 @@ main .pricingTable .block li img{
 	width: 15px;
 	height: 15px;
 	position: absolute;
-	top: 20%;
+	top: 30%;
 	left: -20px;
 }
 main .pricingTable .block li p{
 	color: grey;
 }
-main .pricingTable .block button#three{
+main .pricingTable .block:nth-child(1) button{
 	border: 2px solid #38c695;
 }
-
-
-
+main .pricingTable .block:nth-child(1) button:hover{
+	background-color: #38c695;
+}
+main .pricingTable .block:nth-child(1) button:hover p{
+	color: #fff;
+}
+main .pricingTable .block:nth-child(2) button{
+	border: 2px solid #fc5f45;
+}
+main .pricingTable .block:nth-child(2) button:hover{
+	background-color: #fc5f45;
+}
+main .pricingTable .block:nth-child(2) button:hover p{
+	color: #fff;
+}
+main .pricingTable .block:nth-child(3) button{
+	border: 2px solid #a374de;
+}
+main .pricingTable .block:nth-child(3) button:hover{
+	background-color: #a374de;
+}
+main .pricingTable .block:nth-child(3) button:hover p{
+	color: #fff;
+}
+main .testimonials{
+	background-color: #3f4049;
+}
+main .testimonials .container{
+	position: relative;
+	padding: 150px 0;
+}
+main .testimonials .container p.num{
+	color: rgba(255, 255, 255, .1);
+}
+main .testimonials .container h2.block{
+	color: #fff;
+}
+main .testimonials .container p.text1Block{
+	color: #fff;
+}
+main .testimonials .container div.block{
+	display: flex;
+}
+main .testimonials .container .left{
+	width: 35%;
+	height: 400px;
+	background: linear-gradient(#ae8a83, #a3a3a3);
+}
+main .testimonials .container .right{
+	width: 70%;
+	margin: auto 0;
+	background-color: #fff;
+	padding: 50px;
+	position: relative;
+}
+main .testimonials .container .right::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #fc5f45;
+}
+main .testimonials .container .right p.quotes{
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 348px;
+	line-height: 348px;
+	color: rgba(0, 0, 0, .1);
+	font-family: Libre Baskerville;
+}
+main .testimonials .container .right p.text2{
+	color: grey;
+	margin-bottom: 25px;
+}
+main .testimonials .container .right p.painting{
+	font-family: Sacramento;
+	font-size: 36px;
+}
+main .testimonials .container .right p.text3{
+	color: #fc5f45;
+}
+main .testimonials .container .right .circles{
+	position: absolute;
+	bottom: -15%;
+	right: 0;
+	display: flex;
+}
+main .testimonials .container .right .circ{
+	width: 20px;
+	height: 20px;
+	border: 2px solid #fc5f45;
+	border-radius: 100%;
+	margin-left: 10px;
+	position: relative;
+}
+main .testimonials .container .right .circ::before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 60%;
+	height: 60%;
+	border-radius: 100%;
+	background-color: #fc5f45;
+}
+main .testimonials .container .right .circ{
+	border-color: #fff;
+}
+main .testimonials .container .right .circ::before{
+	width: 0;
+	height: 0;
+}
+main .testimonials .container .right .circ#one{
+	border-color: #fc5f45;
+}
+main .testimonials .container .right .circ#one::before{
+	width: 60%;
+	height: 60%;
+}
+main .whySelectUs .container{
+	position: relative;
+	padding: 150px 0;
+}
+main .whySelectUs .container .blocks{
+/*	display: flex;*/
+}
+main .whySelectUs .container .blocks .line{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 75px;
+}
+main .whySelectUs .container .blocks .block{
+	width: 30%
+}
+main .whySelectUs .container .line .up{
+	display: flex;
+	margin-bottom: 25px;
+	align-items: center;
+}
+main .whySelectUs .container .line .up img{
+	margin-right: 25px;
+}
+main .whySelectUs .container .down{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main .whySelectUs .container .down h4{
+	font-family: Poppins;
+	margin-right: 25px;
+	font-weight: 500;
+}
+main .whySelectUs .container .down button{
+	border-color: #fc5f45;
+	border-style: solid;
+	background-color: #fc5f45;
+}
+main .whySelectUs .container .down button p{
+	color: #fff;
+	font-weight: 500;
+}
+main .ourBlog{
+	background-color: rgba(0, 0, 0, .05);
+}
+main .ourBlog .container{
+	position: relative;
+	padding: 150px 0;
+}
+main .ourBlog .container .blocks{
+	display: flex;
+	background-color: space-between;
+}
+main .ourBlog .container .blocks .left,
+main .ourBlog .container .blocks .right{
+	width: 48%;
+}
+main .ourBlog .container .blocks .left .img{
+	width: 100%;
+	height: 500px;
+	background: linear-gradient(#cbcbcb, #6a6a6a);
+	 position: relative;
+}
+main .ourBlog .container .blocks .left .img p{
+	position: absolute;
+	bottom: 5%;
+	left: 5%;
+	color: #fc5f45;
+}
+main .ourBlog .container .blocks .left .img p span{
+	color: #d4d4d4;
+}
+main .ourBlog .container .blocks .left .block{
+	padding: 25px 50px;
+	background-color: #fff;
+	position: relative;
+}
+main .ourBlog .container .blocks .left .block::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #fc5f45;
+}
+main .ourBlog .container .blocks .left .block h5{
+	font-family: Poppins;
+	font-weight: 600;
+	margin-bottom: 25px;
+}
+main .ourBlog .container .blocks .left .block a{
+	font-family: Poppins;
+	font-weight: 500;
+	color: #000;
+	text-decoration: none;
+}
 
 
 
