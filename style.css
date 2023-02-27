@@ -1009,7 +1009,7 @@ main .ourBlog .container{
 }
 main .ourBlog .container .blocks{
 	display: flex;
-	background-color: space-between;
+	justify-content: space-between;
 }
 main .ourBlog .container .blocks .left,
 main .ourBlog .container .blocks .right{
@@ -1029,6 +1029,8 @@ main .ourBlog .container .blocks .left .img p{
 }
 main .ourBlog .container .blocks .left .img p span{
 	color: #d4d4d4;
+	font-size: 13px;
+	margin-left: 15px;
 }
 main .ourBlog .container .blocks .left .block{
 	padding: 25px 50px;
@@ -1055,8 +1057,164 @@ main .ourBlog .container .blocks .left .block a{
 	color: #000;
 	text-decoration: none;
 }
+main .ourBlog .container .blocks .right .blocks{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+main .ourBlog .container .blocks .right .block{
+	background-color: #fff;
+	padding: 25px 50px;
+	position: relative;
+}
+main .ourBlog .container .blocks .right .block::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 4px;
+}
+main .ourBlog .container .blocks .right .block:nth-child(1)::before{
+	background-color: #38c695;
+}
+main .ourBlog .container .blocks .right .block:nth-child(2)::before{
+	background-color: #a374de;
+}
+main .ourBlog .container .blocks .right .block:nth-child(3)::before{
+	background-color: #cb995a;
+}
+main .ourBlog .container .blocks .right .block:nth-child(1) p.text2:nth-child(1){
+	color: #38c695;
+}
+main .ourBlog .container .blocks .right .block:nth-child(2) p.text2:nth-child(1){
+	color: #a374de;
+}
+main .ourBlog .container .blocks .right .block:nth-child(3) p.text2:nth-child(1){
+	color: #cb995a;
+}
+main .ourBlog .container .blocks .right .block p.text2:nth-child(1){
+	margin-bottom: 10px;
+}
+main .ourBlog .container .blocks .right .block span{
+	color: grey;
+	font-size: 13px;
+}
+main .ourBlog .container .blocks .right .block p.text1{
+	margin-bottom: 10px;
+}
+main .ourBlog .container .blocks .right .block p.text2:nth-child(3){
+	line-height: 2;
+}
+main .ourBlog .container .blocks .right .block a{
+	font-family: Poppins;
+	font-weight: 500;
+	text-decoration: none;
+}
+main .ourBlog .container .blocks .right .block:nth-child(1) a{
+	color: #38c695;
+}
+main .ourBlog .container .blocks .right .block:nth-child(2) a{
+	color: #a374de;
+}
+main .ourBlog .container .blocks .right .block:nth-child(3) a{
+	color: #cb995a;
+}
+main .ourBlog .sub{
+	background-color: #fff;
+	padding: 125px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main .ourBlog .sub h3{
+	font-family: Poppins;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+main .ourBlog .sub form{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+main .ourBlog .sub form input{
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-style: solid;
+	border-color: rgba(0, 0, 0, .1);
+	padding: 0 25px;
+	width: 20%;
+	font-size: 16px;
+	font-family: Poppins;
+	color: grey;
+	outline: none;
 
-
+}
+main .ourBlog .sub form button{
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-style: solid;
+	border-color: #fc5f45;
+	transform: translateX(-2px);
+	background-color: #fc5f45;
+}
+main .ourBlog .sub form button p{
+	font-weight: 500;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 16px;
+}
+main .getInTouch{
+	background-color: rgba(0, 0, 0, .20);
+}
+main .getInTouch .container{
+	position: relative;
+	padding: 150px;
+}
+main .getInTouch p.num{
+	color: rgba(255, 255, 255, .1);
+}
+main .getInTouch form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+main .getInTouch form .up,
+main .getInTouch form .middle{
+	display: flex;
+	width: 60%;
+	padding-bottom: 25px;
+}
+main .getInTouch form .up input:nth-child(1),
+main .getInTouch form .middle input:nth-child(1){
+	margin-right: 25px;
+}
+main .getInTouch form input,
+main .getInTouch form textarea{
+	width: 100%;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 16px;
+	font-family: Poppins;
+	border: 0;
+	outline: none;
+	color: grey;
+}
+main .getInTouch form textarea{
+	width: 60%;
+	height: 250px;
+	margin-bottom: 50px;
+	color: grey;
+}
+main .getInTouch form button{
+	border-color: #fc5f45;
+	background-color: #fc5f45;
+	border-style: solid;
+}
+main .getInTouch form button p{
+	color: #fff;
+}
 
 
 
