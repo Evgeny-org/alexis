@@ -36,6 +36,15 @@ h2.block{
 	text-align: center;
 	font-weight: 400;
 }
+h2.block.element-animation{
+	transform: translateY(-100px);
+	opacity: 0;
+}
+h2.block.element-animation.element-show{
+	transform: translateY(0px);
+	opacity: 1;
+	transition: .5s;
+}
 h3{
 	font-size: 30px;
 }
@@ -54,6 +63,15 @@ p.text1Block{
 	text-align: center;
 	font-family: Poppins;
 	color: rgba(0, 0, 0, .75);
+}
+p.text1Block.element-animation{
+	opacity: 0;
+	transform: translateY(-100px);
+}
+p.text1Block.element-animation.element-show{
+	opacity: 1;
+	transform: translateY(0px);
+	transition: .75s;
 }
 p.text2{
 	font-size: 15px;
@@ -78,6 +96,13 @@ p.num{
 	left: 50%;
 	transform: translateX(-50%);
 }
+p.num.element-animation{
+	opacity: 0;
+}
+p.num.element-animation.element-show{
+	opacity: 1;
+	transition: 2s;
+}
 button{
 	padding: 10px 30px;
 	border-radius: 25px;
@@ -87,6 +112,12 @@ button p{
 	font-family: Poppins;
 	font-weight: 600;
 	font-size: 18px;
+}
+.element-animation{
+	opacity: 0;
+}
+.element-animation.element-show{
+	opacity: 1;
 }
 
 header{
@@ -98,7 +129,16 @@ header nav{
 	left: 0;
 	width: 100%;
 	background-color: #fff;
-	z-index: 1;
+	z-index: 999;
+	animation: nav .5s;
+}
+@keyframes nav{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0);
+	}
 }
 header nav .container{
 	display: flex;
@@ -119,11 +159,11 @@ header nav ul li a{
 	font-family: Poppins;
 }
 header .weDesign{
-	margin-top: 77px;
 	background-color: #3f4049;
 	padding: 150px 0;
 }
 header .weDesign .container{
+	margin-top: 77px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -134,11 +174,29 @@ header .weDesign h1{
 	text-align: center;
 	margin: 0 auto 75px auto;
 }
+header .weDesign h1.element-animation{
+	transform: translateX(-250px);
+	opacity: 0;
+}
+header .weDesign h1.element-animation.element-show{
+	transform: translateX(0px);
+	transition: .5s;
+	opacity: 1;
+}
 header .weDesign button{
 	background-color: #fc5f45;
 	border: 0;
 	color: #fff;
 	margin-bottom: 100px;
+}
+header .weDesign button.element-animation{
+	transform: translateX(250px);
+	opacity: 0;
+}
+header .weDesign button.element-animation.element-show{
+	transform: translateX(0);
+	transition: .5s;
+	opacity: 1;
 }
 header .weDesign .blocks{
 	width: 100%;
@@ -150,6 +208,23 @@ header .weDesign .block{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+header .weDesign .block:nth-child(1).element-animation{
+	transform: translateX(-250px);
+}
+header .weDesign .block:nth-child(2).element-animation{
+	transform: translateX(-500px);
+}
+header .weDesign .block:nth-child(3).element-animation{
+	transform: translateX(-750px);
+}
+header .weDesign .block.element-animation{
+	opacity: 0;
+}
+header .weDesign .block.element-animation.element-show{
+	transform: translateX(0);
+	opacity: 1;
+	transition: .5s;
 }
 header .weDesign .block img{
 	margin-bottom: 25px;
@@ -166,7 +241,6 @@ header .weDesign .block:nth-child(3) p.text1{
 header .weDesign .block p{
 	text-transform: uppercase;
 }
-
 main .aboutUs{
 	margin-bottom: 150px;
 }
@@ -177,6 +251,15 @@ main .aboutUs .block{
 	width: 555px;
 	height: 700px;
 	background-color: rgba(0, 0, 0, .25);
+}
+main .aboutUs .block.element-animation{
+	transform: translateX(-250px);
+	opacity: 0;
+}
+main .aboutUs .block.element-animation.element-show{
+	transform: translateX(0);
+	transition: .5s;
+	opacity: 1;
 }
 main .aboutUs .blockIn{
 	position: absolute;
@@ -189,6 +272,15 @@ main .aboutUs .blockIn{
 	box-shadow: 0px 0px 25px 0px grey;
 	padding: 100px 75px;
 	box-sizing: border-box;
+}
+main .aboutUs .blockIn.element-animation{
+	transform: translate(500px, -50%);
+	opacity: 0;
+}
+main .aboutUs .blockIn.element-animation.element-show{
+	transform: translate(0, -50%);
+	transition: .5s;
+	opacity: 1;
 }
 main .aboutUs .blockIn p.num{
 	position: absolute;
@@ -253,6 +345,15 @@ main .ourFocus h2{
 	margin-bottom: 25px;
 	font-weight: 400;
 }
+main .ourFocus h2.element-animation{
+	opacity: 0;
+	transform: translateY(-100px);
+}
+main .ourFocus h2.element-animation.element-show{
+	opacity: 1;
+	transform: translateY(0px);
+	transition: .5s;
+}
 main .ourFocus p.text1{
 	margin-bottom: 100px;
 }
@@ -272,6 +373,27 @@ main .ourFocus .block{
 	position: relative;
 	top: 0;
 	left: 0;
+}
+main .ourFocus .block:nth-child(1).element-animation{
+	transform: translateX(-150px);
+	opacity: 0;
+}
+main .ourFocus .block:nth-child(2).element-animation{
+	transform: translateX(-100px);
+	opacity: 0;
+}
+main .ourFocus .block:nth-child(3).element-animation{
+	transform: translateX(100px);
+	opacity: 0;
+}
+main .ourFocus .block:nth-child(4).element-animation{
+	transform: translateX(150px);
+	opacity: 0;
+}
+main .ourFocus .block.element-animation.element-show{
+	transform: translateX(0px);
+	opacity: 1;
+	transition: .5s;
 }
 main .ourFocus .block:after{
 	content: '';
@@ -308,7 +430,14 @@ main .ourFocus .exploreOur{
 	background-color: #3f4049;
 }
 main .ourFocus .exploreOur .container{
+/*	padding: 100px 0;*/
+}
+main .ourFocus .exploreOur .container.element-animation{
+	padding: 150px 0;
+}
+main .ourFocus .exploreOur .container.element-animation.element-show{
 	padding: 100px 0;
+	transition: .5s;
 }
 main .ourFocus .exploreOur h3{
 	color: #fff;
@@ -321,9 +450,6 @@ main .ourFocus .exploreOur img{
 }
 main .ourFocus .exploreOur p.text2{
 	color: #fff;
-}
-main .portfolio{
-
 }
 main .portfolio .container{
 	position: relative;
@@ -339,8 +465,17 @@ main .portfolio .container p.num{
 }
 main .portfolio .container h2{
 	text-align: center;
-	margin-bottom: 50px;
+	margin-bottom: 25px;
 	font-weight: 400;
+}
+main .portfolio h2.element-animation{
+	opacity: 0;
+	transform: translateY(-100px);
+}
+main .portfolio h2.element-animation.element-show{
+	opacity: 1;
+	transform: translateY(0px);
+	transition: .5s;
 }
 main .portfolio .container p.text1{
 	text-align: center;
@@ -352,6 +487,41 @@ main .portfolio .container .blocks{
 }
 main .portfolio .container .block{
 	position: relative;
+}
+main .portfolio .container .block.element-animation{
+	transform: translateY(50px);
+	opacity: 0;
+}
+main .portfolio .container .block.element-animation.element-show{
+	transform: translateY(0px);
+	opacity: 1;
+	transition: .5s;
+}
+main .portfolio .container .line img.element-animation{
+	transform: translateY(50px);
+	opacity: 0;
+}
+main .portfolio .container .line img.element-animation.element-show{
+	transform: translateY(0px);
+	opacity: 1;
+}
+main .portfolio .container .line img:nth-child(1).element-animation.element-show{
+	transition: .5s;
+}
+main .portfolio .container .line img:nth-child(2).element-animation.element-show{
+	transition: 1s;
+}
+main .portfolio .container .line img:nth-child(3).element-animation.element-show{
+	transition: 1.5s;
+}
+main .portfolio .container .line:nth-child(2) img:nth-child(1).element-animation.element-show{
+	transition: 1.5s;
+}
+main .portfolio .container .line:nth-child(2) img:nth-child(2).element-animation.element-show{
+	transition: 1s;
+}
+main .portfolio .container .line:nth-child(2) img:nth-child(3).element-animation.element-show{
+	transition: .5s;
 }
 main .portfolio .container .block .bg{
 	width: 100%;
@@ -433,6 +603,26 @@ main .ourTeam .container .blocks .block{
 	padding: 5px 5px 5px 4px;
 	position: relative;
 }
+main .ourTeam .container .blocks .block.element-animation{
+	transform: translateX(100px);
+	opacity: 0;
+}
+main .ourTeam .container .blocks .block.element-animation.element-show{
+	transform: translateX(0px);
+	opacity: 1;
+}
+main .ourTeam .container .blocks .block:nth-child(1).element-animation.element-show{
+	transition: .5s;
+}
+main .ourTeam .container .blocks .block:nth-child(2).element-animation.element-show{
+	transition: .75s;
+}
+main .ourTeam .container .blocks .block:nth-child(3).element-animation.element-show{
+	transition: 1s;
+}
+main .ourTeam .container .blocks .block:nth-child(4).element-animation.element-show{
+	transition: 1.25s;
+}
 main .ourTeam .container .blocks .block::after{
 	content: '';
 	position: absolute;
@@ -498,6 +688,15 @@ main .ourTeam .container .blocks .comment{
 	background-color: #fff;
 	padding: 100px;
 	box-sizing: border-box;
+}
+main .ourTeam .container .blocks .comment.element-animation{
+	opacity: 0;
+	transform: translateY(-100px);
+}
+main .ourTeam .container .blocks .comment.element-animation.element-show{
+	opacity: 1;
+	transform: translateY(0px);
+	transition: .5s;
 }
 main .ourTeam .container .comment{
 	display: flex;
@@ -607,6 +806,26 @@ main .ourTeam .ourTeamAfter .block{
 	flex-direction: column;
 	align-items: center;
 }
+main .ourTeam .ourTeamAfter .block.element-animation{
+	transform: translateY(100px);
+	opacity: 0;
+}
+main .ourTeam .ourTeamAfter .block.element-animation.element-show{
+	transform: translateY(0px);
+	opacity: 1;
+}
+main .ourTeam .ourTeamAfter .block:nth-child(1).element-animation.element-show{
+	transition: .5s;
+}
+main .ourTeam .ourTeamAfter .block:nth-child(2).element-animation.element-show{
+	transition: .75s;
+}
+main .ourTeam .ourTeamAfter .block:nth-child(3).element-animation.element-show{
+	transition: 1s;
+}
+main .ourTeam .ourTeamAfter .block:nth-child(4).element-animation.element-show{
+	transition: 1.25s;
+}
 main .ourTeam .ourTeamAfter .block img:nth-child(1){
 	margin-bottom: 20px;
 }
@@ -625,9 +844,6 @@ main .workSteps{
 }
 main .workSteps .container{
 	padding: 150px 0;
-}
-main .workSteps .blocks{
-
 }
 main .workSteps .blocks .block{
 	margin: 0 auto;
@@ -648,6 +864,13 @@ main .workSteps .blocks .block:nth-child(3){
 main .workSteps .blocks .block:nth-child(4){
 	background-color: #cb995a;
 }
+main .workSteps .blocks .block.element-animation{
+	opacity: 0;
+}
+main .workSteps .blocks .block.element-animation.element-show{
+	opacity: 1;
+	transition: .5s;
+}
 main .workSteps .block .blockInAfter,
 main .workSteps .block .blockInBefore{
 	width: 100%;
@@ -664,6 +887,54 @@ main .workSteps .block .blockInBefore{
 }
 main .workSteps .block .blockInBefore{
 	left: 75%;
+}
+main .workSteps .block .blockInAfter.element-animation,
+main .workSteps .block .blockInBefore.element-animation{
+	animation: none;
+}
+main .workSteps .block .blockInAfter.element-animation.element-show{
+	animation: after 1s;
+}
+main .workSteps .block .blockInBefore.element-animation.element-show{
+	animation: before 1s;
+}
+@keyframes after{
+	0%{
+		opacity: 0;
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+	40%{
+		opacity: 1;
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+	100%{
+		top: -10%;
+		left: -75%;
+		height: 90%;
+	}
+}
+@keyframes before{
+	0%{
+		opacity: 0;
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+	40%{
+		opacity: 1;
+		top: 0;
+		left: 0;
+		height: 100%;
+	}
+	100%{
+		top: -10%;
+		left: 75%;
+		height: 90%;
+	}
 }
 main .workSteps .block .blockInAfter:after,
 main .workSteps .block .blockInBefore:after{
@@ -739,6 +1010,40 @@ main .pricingTable .blocks .block::before{
 	left: 0;
 	width: 100%;
 	height: 4px;
+}
+
+main .pricingTable .blocks .block:nth-child(1).element-animation{
+	transform: translateX(-100px);
+}
+main .pricingTable .blocks .block:nth-child(2).element-animation{
+	animation: none;
+}
+main .pricingTable .blocks .block:nth-child(2).element-animation.element-show{
+	animation: pT .5s;
+}
+@keyframes pT{
+	0%{
+		transform: translateX(-50px);
+	}
+	25%{
+		transform: translateX(25px);
+	}
+	50%{
+		transform: translateX(-10px);
+	}
+	75%{
+		transform: translateX(5px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+main .pricingTable .blocks .block:nth-child(3).element-animation{
+	transform: translateX(100px);
+}
+main .pricingTable .blocks .block.element-animation.element-show{
+	transform: translateX(0);
+	transition: .5s;
 }
 main .pricingTable .blocks .block:nth-child(1)::before{
 	background-color: #38c695;
@@ -887,6 +1192,15 @@ main .testimonials .container .left{
 	width: 35%;
 	height: 400px;
 	background: linear-gradient(#ae8a83, #a3a3a3);
+	z-index: 1;
+}
+main .testimonials .container .left.element-animation{
+	transform: translateY(100px);
+	opacity: 1;
+}
+main .testimonials .container .left.element-animation.element-show{
+	transform: translateY(0px);
+	transition: .5s;
 }
 main .testimonials .container .right{
 	width: 70%;
@@ -894,6 +1208,14 @@ main .testimonials .container .right{
 	background-color: #fff;
 	padding: 50px;
 	position: relative;
+	z-index: 0;
+}
+main .testimonials .container .right.element-animation{
+	transform: translateX(-350px);
+}
+main .testimonials .container .right.element-animation.element-show{
+	transform: translateX(0px);
+	transition: 1s;
 }
 main .testimonials .container .right::before{
 	content: '';
@@ -959,6 +1281,24 @@ main .testimonials .container .right .circ::before{
 main .testimonials .container .right .circ#one{
 	border-color: #fc5f45;
 }
+main .testimonials .container .right .circ#one.element-animation.element-show{
+	transition: 1s;
+}
+main .testimonials .container .right .circ#two.element-animation.element-show{
+	transition: 1.25s;
+}
+main .testimonials .container .right .circ#three.element-animation.element-show{
+	transition: 1.5s;
+}
+main .testimonials .container .right .circ#four.element-animation.element-show{
+	transition: 1.75s;
+}
+main .testimonials .container .right .circ#five.element-animation.element-show{
+	transition: 2s;
+}
+main .testimonials .container .right .circ#six.element-animation.element-show{
+	transition: 2.25s;
+}
 main .testimonials .container .right .circ#one::before{
 	width: 60%;
 	height: 60%;
@@ -974,6 +1314,33 @@ main .whySelectUs .container .blocks .line{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 75px;
+}
+main .whySelectUs .container .blocks .line:nth-child(1) .block.element-animation{
+	transform: translateX(200px);
+}
+main .whySelectUs .container .blocks .line:nth-child(1) .block:nth-child(1).element-animation.element-show{
+	transition: .5s;
+}
+main .whySelectUs .container .blocks .line:nth-child(1) .block:nth-child(2).element-animation.element-show{
+	transition: 1s;
+}
+main .whySelectUs .container .blocks .line:nth-child(1) .block:nth-child(3).element-animation.element-show{
+	transition: 1.5s;
+}
+main .whySelectUs .container .blocks .line:nth-child(2) .block.element-animation{
+	transform: translateX(-200px);
+}
+main .whySelectUs .container .blocks .line:nth-child(2) .block:nth-child(1).element-animation.element-show{
+	transition: 1.5s;
+}
+main .whySelectUs .container .blocks .line:nth-child(2) .block:nth-child(2).element-animation.element-show{
+	transition: 1s;
+}
+main .whySelectUs .container .blocks .line:nth-child(2) .block:nth-child(3).element-animation.element-show{
+	transition: .5s;
+}
+main .whySelectUs .container .blocks .line .block.element-animation.element-show{
+	transform: translateX(0px);
 }
 main .whySelectUs .container .blocks .block{
 	width: 30%
@@ -996,10 +1363,56 @@ main .whySelectUs .container .down h4{
 	margin-right: 25px;
 	font-weight: 500;
 }
+main .whySelectUs .container .down h4.element-animation{
+	animation: none;
+}
+main .whySelectUs .container .down h4.element-animation.element-show{
+	animation: wSU .5s;
+}
+@keyframes wSU{
+	0%{
+		transform: translateX(-50px);
+	}
+	25%{
+		transform: translateX(25px);
+	}
+	50%{
+		transform: translateX(-10px);
+	}
+	75%{
+		transform: translateX(5px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
 main .whySelectUs .container .down button{
 	border-color: #fc5f45;
 	border-style: solid;
 	background-color: #fc5f45;
+}
+main .whySelectUs .container .down button.element-animation{
+	animation: none;
+}
+main .whySelectUs .container .down button.element-animation.element-show{
+	animation: wSUb .5s;
+}
+@keyframes wSUb{
+	0%{
+		transform: translateX(50px);
+	}
+	25%{
+		transform: translateX(-25px);
+	}
+	50%{
+		transform: translateX(10px);
+	}
+	75%{
+		transform: translateX(-5px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
 }
 main .whySelectUs .container .down button p{
 	color: #fff;
@@ -1026,6 +1439,13 @@ main .ourBlog .container .blocks .left .img{
 	background: linear-gradient(#cbcbcb, #6a6a6a);
 	 position: relative;
 }
+main .ourBlog .container .blocks .left .img.element-animation{
+	transform: translateX(-250px);
+}
+main .ourBlog .container .blocks .left .img.element-animation.element-show{
+	transform: translateX(0);
+	transition: .5s;
+}
 main .ourBlog .container .blocks .left .img p{
 	position: absolute;
 	bottom: 5%;
@@ -1041,6 +1461,13 @@ main .ourBlog .container .blocks .left .block{
 	padding: 25px 50px;
 	background-color: #fff;
 	position: relative;
+}
+main .ourBlog .container .blocks .left .block.element-animation{
+	transform: translateX(-250px);
+}
+main .ourBlog .container .blocks .left .block.element-animation.element-show{
+	transform: translateX(0);
+	transition: .5s;
 }
 main .ourBlog .container .blocks .left .block::after{
 	content: '';
@@ -1072,6 +1499,31 @@ main .ourBlog .container .blocks .right .block{
 	background-color: #fff;
 	padding: 25px 50px;
 	position: relative;
+}
+main .ourBlog .container .blocks .right .block.element-animation{
+	animation: none;
+}
+main .ourBlog .container .blocks .right .block.element-animation.element-show{
+	animation: oBb .5s;
+}
+@keyframes oBb{
+	0%{
+		transform: translateX(50px);
+		opacity: 0;
+	}
+	25%{
+		transform: translateX(-25px);
+		opacity: 1;
+	}
+	50%{
+		transform: translateX(10px);
+	}
+	75%{
+		transform: translateX(-5px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
 }
 main .ourBlog .container .blocks .right .block::before{
 	content: '';
@@ -1138,6 +1590,15 @@ main .ourBlog .sub h3{
 	font-weight: 400;
 	margin-bottom: 25px;
 }
+main .ourBlog .sub h3.element-animation{
+	letter-spacing: -15px;
+	transform: translateX(-200px);
+}
+main .ourBlog .sub h3.element-animation.element-show{
+	letter-spacing: 0px;
+	transform: translateX(0px);
+	transition: .5s;
+}
 main .ourBlog .sub form{
 	width: 100%;
 	display: flex;
@@ -1154,7 +1615,26 @@ main .ourBlog .sub form input{
 	font-family: Poppins;
 	color: grey;
 	outline: none;
-
+}
+main .ourBlog .sub form input.element-animation{
+		animation: none;
+}
+main .ourBlog .sub form input.element-animation.element-show{
+	animation: osi .5s;
+}
+@keyframes osi{
+	0%{
+		transform: translateX(-50px);
+	}
+	33%{
+		transform: translateX(0px);
+	}
+	66%{
+		transform: translateX(-10px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
 }
 main .ourBlog .sub form button{
 	border-top-left-radius: 0;
@@ -1163,6 +1643,27 @@ main .ourBlog .sub form button{
 	border-color: #fc5f45;
 	transform: translateX(-2px);
 	background-color: #fc5f45;
+}
+
+main .ourBlog .sub form button.element-animation{
+	animation: none;
+}
+main .ourBlog .sub form button.element-animation.element-show{
+	animation: osb .5s;
+}
+@keyframes osb{
+	0%{
+		transform: translateX(50px);
+	}
+	33%{
+		transform: translateX(0px);
+	}
+	66%{
+		transform: translateX(10px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
 }
 main .ourBlog .sub form button p{
 	font-weight: 500;
