@@ -14,6 +14,10 @@ font-family: 'Sacramento', cursive;
 	padding: 0;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 @font-face{
 	font-family: WSAJ; 
 	src: url(fonts/WisdomScriptAJ.otf); 
@@ -659,6 +663,9 @@ main .ourTeam .container .block .img{
 	width: 100%;
 	height: 250px;
 	margin-bottom: 10px;
+}
+main .ourTeam .container .block{
+	cursor: pointer;
 }
 main .ourTeam .container .block:nth-child(1) .img{
 	background-color: #fc5f45;
