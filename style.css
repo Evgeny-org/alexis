@@ -606,6 +606,7 @@ main .ourTeam .container .blocks .block{
 	background-color: #fff;
 	padding: 5px 5px 5px 4px;
 	position: relative;
+	z-index: 1;
 }
 main .ourTeam .container .blocks .block.element-animation{
 	transform: translateX(100px);
@@ -709,58 +710,57 @@ main .ourTeam .container .comment{
 	display: flex;
 	justify-content: space-between;
 	position: relative;
+	animation: none;
+}
+@keyframes commOut{
+	0%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	100%{
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+}
+@keyframes commIn{
+	0%{
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+main .ourTeam .container .comment:before{
+	content: '';
+	position: absolute;
+	top: -50px;
+	width: 75px;
+	height: 50px;
+	background-color: #fff;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 main .ourTeam .container .comment#first{
 /*	display: none;*/
+	opacity: 1;
 }
 main .ourTeam .container .comment#first::before{
-	content: '';
-	position: absolute;
-	top: -50px;
 	left: 100px;
-	width: 75px;
-	height: 50px;
-	background-color: #fff;
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-main .ourTeam .container .comment#second{
-	display: none;
-}
-main .ourTeam .container .comment#second::before{
-	content: '';
-	position: absolute;
-	top: -50px;
-	left: 400px;
-	width: 75px;
-	height: 50px;
-	background-color: #fff;
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
-main .ourTeam .container .comment#third{
-	display: none;
-}
-main .ourTeam .container .comment#third::before{
-	content: '';
-	position: absolute;
-	top: -50px;
-	left: 715px;
-	width: 75px;
-	height: 50px;
-	background-color: #fff;
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-}
+main .ourTeam .container .comment#second,
+main .ourTeam .container .comment#third,
 main .ourTeam .container .comment#fourh{
 	display: none;
 }
+main .ourTeam .container .comment#second::before{
+	left: 400px;
+}
+main .ourTeam .container .comment#third::before{
+	left: 715px;
+}
 main .ourTeam .container .comment#fourh::before{
-	content: '';
-	position: absolute;
-	top: -50px;
 	left: 1025px;
-	width: 75px;
-	height: 50px;
-	background-color: #fff;
-	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 main .ourTeam .container .comment .left{
 	width: 70%;

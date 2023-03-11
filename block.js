@@ -14,16 +14,64 @@ const block4 = document.querySelector('main .ourTeam .container .blocks .block:n
 const comm4 = document.querySelector('main .ourTeam .container .comment#fourh')
 const comm4S = window.getComputedStyle(comm4)
 
-// const block = document.querySelectorAll('main .development .block') //обращение ко всему элементу
-// for (let blocks of block){
-// }
+const comms = document.querySelectorAll('main .ourTeam .container .comment') //обращение ко всему элементу
+const block = document.querySelectorAll('main .ourTeam .container .blocks .block') //обращение ко всему элементу
 
-block2.addEventListener("click", function(e){
-	if () {}
+for (let blocks of block){
+	blocks.addEventListener("click", function(e){
+		for (let commsS of comms){
+			let commsAll = window.getComputedStyle(commsS)
+			if (blocks.id == 'b1') {
+				if (commsS.id !== 'first' && commsAll.display == 'flex') {	// действие с блоком с display = 'flex', при нажатии на 1 блок
+					//это если какой-либо иной блок, кроме первого имеет флекс, то он убирается
+					commsS.style.animation = 'commOut .5s'
+					setTimeout(() => commsS.style.display = 'none', 500)
+				} else if (commsS.id == 'first') {									// иначе же,
+					setTimeout(() => commsS.style.display = 'flex', commsS.style.animation = 'commIn .5s', 500)
+				}
+				
+			}
+			if (blocks.id == 'b2') {
+				if (commsS.id !== 'second' && commsAll.display == 'flex') {
+					commsS.style.animation = 'commOut .5s'
+					setTimeout(() => commsS.style.display = 'none', 500)
+				} else if (commsS.id == 'second') {
+					setTimeout(() => commsS.style.display = 'flex', commsS.style.animation = 'commIn .5s', 500)
+				}
+			}
+			if (blocks.id == 'b3') {
+				if (commsS.id !== 'third' && commsAll.display == 'flex') {
+					commsS.style.animation = 'commOut .5s'
+					setTimeout(() => commsS.style.display = 'none', 500)
+				} else if (commsS.id == 'third') {
+					setTimeout(() => commsS.style.display = 'flex', commsS.style.animation = 'commIn .5s', 500)
+				}
+			}
+			if (blocks.id == 'b4') {
+				if (commsS.id !== 'fourh' && commsAll.display == 'flex') {
+					commsS.style.animation = 'commOut .5s'
+					setTimeout(() => commsS.style.display = 'none', 500)
+				} else if (commsS.id == 'fourh') {
+					setTimeout(() => commsS.style.display = 'flex', commsS.style.animation = 'commIn .5s', 500)
+				}
+			}
+		}
+	})
+}
+
+// commsS.style. = ''
+// setTimeout(() => commsS.style. = '', 500)
+// console.log('бля')
 
 
-	// comm2.style.display = "flex"
-	// comm1.style.display = "none"
-	// comm3.style.display = "none"
-	// comm4.style.display = "none"
-})
+
+
+
+
+
+
+
+
+
+
+
